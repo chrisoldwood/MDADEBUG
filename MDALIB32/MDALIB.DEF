@@ -1,0 +1,6 @@
+LIBRARY        MDALIB32
+DESCRIPTION    "MDA library thunking layer"
+
+EXPORTS
+     OutputDebugStringA  @1   RESIDENTNAME
+     thk_ThunkData32       

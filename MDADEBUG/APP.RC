@@ -1,0 +1,280 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "ver.h"
+#include "menursc.h"
+#include "strngrsc.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+APPICON                 ICON    DISCARDABLE     "app.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+APPMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "&Debug"
+    BEGIN
+        MENUITEM "&Preferences..\t^P",          IDM_APP
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit\t^X",                   IDM_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Clear",                      IDM_CLEAR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About",                      IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+APPKEYS ACCELERATORS MOVEABLE PURE 
+BEGIN
+    "^C",           IDM_COPY,               ASCII,  NOINVERT
+    "^P",           IDM_APP,                ASCII,  NOINVERT
+    "^X",           IDM_EXIT,               ASCII,  NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+ABOUT_DIALOG DIALOG DISCARDABLE  110, 35, 172, 90
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "About NTDebug"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,65,65,40,14
+    CTEXT           "NTDebug",ABOUT_APPNAME,10,5,150,8
+    CTEXT           "Version 1.1",ABOUT_VERSION,10,18,150,8
+    CTEXT           "(C) Chris Wood 1995",ABOUT_COPYRIGHT,10,31,150,8
+    CTEXT           "EMAIL: cwood@gst-soft.demon.co.uk",ABOUT_EMAILADDR,10,
+                    44,150,8
+    ICON            "APPICON",-1,10,5,18,20
+    ICON            "APPICON",-1,140,5,18,20
+END
+
+SETAPP_DIALOG DIALOG DISCARDABLE  110, 35, 292, 141
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Preferences"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,240,5,40,14
+    PUSHBUTTON      "Cancel",IDCANCEL,240,25,40,14
+    LTEXT           "Enter the main window ClassName of the applications to watch:",
+                    IDC_LABEL,15,81,115,20
+    EDITTEXT        IDC_CLASSNAME,15,105,110,15,ES_AUTOHSCROLL
+    CONTROL         "Thread Creation/Termination.",IDC_NOTIFYTHREADS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,160,95,115,8
+    CONTROL         "DLL Loading/Unloading.",IDC_NOTIFYDLLS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,160,110,115,8
+    GROUPBOX        "Report On",IDC_LABEL,150,65,135,65
+    GROUPBOX        "Passive Monitoring",IDC_LABEL,5,65,135,65
+    CONTROL         "Process Creation/Termination",IDC_NOTIFYPROCESSES,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,160,80,120,8
+    LTEXT           "Enter the path of the application to launch:",IDC_LABEL,
+                    15,20,200,10
+    EDITTEXT        IDC_PATHNAME,15,35,195,15,ES_LOWERCASE | ES_AUTOHSCROLL
+    GROUPBOX        "Active Monitoring",IDC_LABEL,5,5,215,55
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x10004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080904e4"
+        BEGIN
+            VALUE "Comments", "Swanky App!\0"
+            VALUE "CompanyName", "BodgeJob Software\0"
+            VALUE "FileDescription", "NT Application Debug Message Watcher\0"
+            VALUE "FileVersion", "1.0\0"
+            VALUE "InternalName", "NTDEBUG.EXE\0"
+            VALUE "LegalCopyright", "Copyright © 1995 Chris Wood\0"
+            VALUE "OriginalFilename", "NTDEBUG.EXE\0"
+            VALUE "ProductName", "NT Application Debug Message Watcher\0"
+            VALUE "ProductVersion", "1.5\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x809, 1252
+    END
+END
+
+#endif    // !_MAC
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""ver.h""\r\n"
+    "#include ""menursc.h""\r\n"
+    "#include ""strngrsc.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_APPNAME             " NTDebug V1.1 "
+    IDS_VERSION             "1.1"
+    IDS_COPYRIGHT           "(C) Chris Wood 1995"
+    IDS_PRGWNDCLASS         "NTDebugMain"
+    IDS_CLIWNDCLASS         "NTDebugClient"
+    IDS_DILWNDCLASS         "NTDebugDIL"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    2100                    "Set the application to watch"
+    2101                    "Exit NTDebug"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    2200                    "Copy to the clipboard"
+    2201                    "Clear the message window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    2800                    "About NTDebug"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    2900                    "Launch the application"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    63728                   "Restore the window to its former size and position"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    63456                   "Move the window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    63440                   "Resize the window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    63472                   "Minimise the window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    63488                   "Maximise the window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    63536                   "Close the application"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    63744                   "Switch to another task"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,8 @@
+LIBRARY        MDATHUNK
+DESCRIPTION    "MDA library thunking layer"
+
+EXPORTS
+     OutputMsg32    @1   RESIDENTNAME
+     ClearOutput32  @2   RESIDENTNAME
+     SetTitle32     @3   RESIDENTNAME
+     thk_ThunkData32       
